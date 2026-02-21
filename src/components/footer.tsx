@@ -186,10 +186,10 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                   <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div className="space-y-1">
                     <a
-                      href="tel:+919821048434"
+                      href="tel:+919322228428"
                       className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +91 98210 48434
+                      +91 93222 28428
                     </a>
                     <a
                       href="tel:+919167068259"

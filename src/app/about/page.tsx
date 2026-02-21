@@ -47,7 +47,7 @@ const milestones = [
     year: "2020",
     title: "Digital Transformation",
     description:
-      "Launched real-time shipment tracking and digital documentation systems to enhance client experience.",
+      "Launched shipment and digital documentation systems to enhance client experience.",
   },
   {
     year: "2024",
@@ -195,13 +195,13 @@ export default function AboutPage() {
       <Separator />
 
       {/* Timeline */}
-      <section className="relative w-full py-20 md:py-32 bg-muted/30">
+      <section className="relative w-full py-20 md:py-32 bg-gradient-to-br from-green-600 via-emerald-900 to-black">
         <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Our Journey
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
               Three decades of milestones, growth, and achievements
             </p>
           </div>

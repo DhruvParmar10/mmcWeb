@@ -1,13 +1,7 @@
-swarna enterprises
-kamlavati exports
-kichwamaji exporters
-abbey fashions pvt. ltd.
-puneet exports and trading house
-maloo exports
-alcon eletronics pvt ltd
-shreeji chemicals and industries
-the choice fashions
-aasra overseas
-pink city experts
-platinum overseas
-bhana vogue gallery
+In #file:about we have to change the timeline
+
+company was founded in
+BCBA membership was in
+FIATA affiliations in
+Global Network Expansion in
+Digital Transformation in

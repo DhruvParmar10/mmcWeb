@@ -18,9 +18,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    lines: ["+91 98210 48434", "+91 91670 68259"],
+    lines: ["+91 93222 28428", "+91 91670 68259"],
     sub: "Mon–Sat, 9AM–6PM IST",
-    href: "tel:+919821048434",
+    href: "tel:+919322228428",
   },
   {
     icon: Mail,
