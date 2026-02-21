@@ -108,14 +108,6 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#tracking"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Track Shipment
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="#contact"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
