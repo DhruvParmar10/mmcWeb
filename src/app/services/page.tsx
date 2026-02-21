@@ -113,7 +113,7 @@ const serviceDetails = [
 export default function ServicesPage() {
   return (
     <div className="relative w-full">
-      <MarutiNavbar />
+      <MarutiNavbar darkHero />
 
       {/* Hero */}
       <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
