@@ -31,18 +31,18 @@ const secondRowCompanies: Company[] = [
   { name: "York", logo: "/Logos/york-simplymilesahead.png" },
   { name: "SAF-Holland", logo: "/Logos/Saf-holland.png" },
   { name: "Alcon Electronics", logo: "/Logos/alcon eletronics.png" },
-  { name: "Swarna Enterprises" },
-  { name: "Kamlavati Exports" },
-  { name: "Kichwamaji Exporters" },
-  { name: "Abbey Fashions Pvt. Ltd." },
-  { name: "Puneet Exports & Trading House" },
-  { name: "Maloo Exports" },
-  { name: "Shreeji Chemicals & Industries" },
-  { name: "The Choice Fashions" },
-  { name: "Aasra Overseas" },
-  { name: "Pink City Exports" },
-  { name: "Platinum Overseas" },
-  { name: "Bhana Vogue Gallery" },
+  // { name: "Swarna Enterprises" },
+  // { name: "Kamlavati Exports" },
+  // { name: "Kichwamaji Exporters" },
+  // { name: "Abbey Fashions Pvt. Ltd." },
+  // { name: "Puneet Exports & Trading House" },
+  // { name: "Maloo Exports" },
+  // { name: "Shreeji Chemicals & Industries" },
+  // { name: "The Choice Fashions" },
+  // { name: "Aasra Overseas" },
+  // { name: "Pink City Exports" },
+  // { name: "Platinum Overseas" },
+  // { name: "Bhana Vogue Gallery" },
 ];
 
 export interface TestimonialsProps extends React.HTMLAttributes<HTMLElement> {}
@@ -86,6 +86,9 @@ export const TestimonialsSection = React.forwardRef<
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
         >
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+            Shipping Lines
+          </p>
           <div className="relative overflow-hidden">
             <div className="flex gap-8 animate-scroll">
               {[...allCompanies, ...allCompanies].map((company, index) => (
@@ -119,6 +122,9 @@ export const TestimonialsSection = React.forwardRef<
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+            Customers
+          </p>
           <div className="relative overflow-hidden">
             <div className="flex gap-8 animate-scroll-reverse">
               {[...secondRowCompanies, ...secondRowCompanies].map(
