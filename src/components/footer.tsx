@@ -204,7 +204,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                   <div>
                     <a
                       href="mailto:mukeshparmar@marutilogistics.in"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                     >
                       mukeshparmar@marutilogistics.in
                     </a>

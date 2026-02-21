@@ -168,7 +168,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
       >
         <div className="container mx-auto flex max-w-screen-2xl items-center justify-between gap-4 py-2">
           {/* Left side - Logo */}
-          <div className="flex flex-1 items-center gap-2">
+          <div className="flex flex-1 min-w-0 items-center gap-2">
             {/* Mobile menu trigger */}
             {isMobile && (
               <Popover>
@@ -226,8 +226,12 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
                 strokeWidth={2}
               />
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight">
-                  Maruti Mumbai Cargo <br></br>Pvt. Ltd.
+                <span className="font-bold text-xs sm:text-sm md:text-base lg:text-lg leading-tight">
+                  Maruti Mumbai Cargo{" "}
+                  <span className="hidden sm:inline">
+                    <br />
+                    Pvt. Ltd.
+                  </span>
                 </span>
                 <span
                   className={cn(
@@ -275,7 +279,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
           )}
 
           {/* Right side - CTA buttons */}
-          <div className="flex flex-1 items-center justify-end gap-3">
+          <div className="flex shrink-0 md:flex-1 items-center justify-end gap-3">
             <Button
               size="sm"
               className="text-sm font-medium px-4 h-9 rounded-md shadow-sm bg-primary text-primary-foreground hover:bg-primary/90"

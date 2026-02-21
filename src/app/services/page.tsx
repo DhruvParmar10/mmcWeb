@@ -185,7 +185,7 @@ export default function ServicesPage() {
                       {service.description}
                     </p>
                     <Separator />
-                    <ul className="grid grid-cols-2 gap-2">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-2 text-sm">
                           <ArrowRight className="h-3.5 w-3.5 text-primary flex-shrink-0" />

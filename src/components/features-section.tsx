@@ -57,10 +57,25 @@ export const FeaturesSection = React.forwardRef<
   return (
     <section
       ref={ref}
-      className={cn("relative w-full py-20 md:py-32 bg-muted/30", className)}
+      className={cn(
+        "relative w-full py-20 md:py-32 overflow-hidden",
+        className,
+      )}
       {...props}
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl">
+      {/* Blurred background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{
+          backgroundImage: "url('/cargo-ph.avif')",
+          filter: "blur(6px)",
+        }}
+        aria-hidden="true"
+      />
+      {/* Dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
+
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,10 +84,10 @@ export const FeaturesSection = React.forwardRef<
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Why Choose Us
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
             Excellence in every shipment, trust in every delivery
           </p>
         </motion.div>
@@ -90,27 +105,27 @@ export const FeaturesSection = React.forwardRef<
             >
               <div className="text-center">
                 {/* Icon Circle */}
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary mb-6">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/15 text-white mb-6">
                   {feature.icon}
                 </div>
 
                 {/* Stat */}
                 <div className="mb-4">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-1">
                     {feature.stat}
                   </div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                  <div className="text-sm text-white/70 uppercase tracking-wider">
                     {feature.statLabel}
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-white">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-white/75 leading-relaxed">
                   {feature.description}
                 </p>
               </div>

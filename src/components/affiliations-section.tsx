@@ -27,7 +27,7 @@ export const AffiliationsSection = React.forwardRef<
     <section
       ref={ref}
       className={cn(
-        "relative w-full pb-20 md:pb-28 bg-muted/30 overflow-hidden",
+        "relative w-full py-20 md:py-28 bg-muted/30 overflow-hidden",
         className,
       )}
       {...props}

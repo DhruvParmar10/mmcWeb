@@ -108,12 +108,12 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
           <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
 
           {/* Stats + scroll button overlaid at the bottom */}
-          <div className="absolute bottom-0 left-0 right-0 px-8 md:px-14 pb-10 flex flex-wrap items-end justify-between gap-6">
+          <div className="absolute bottom-0 left-0 right-0 px-4 md:px-8 lg:px-14 pb-6 md:pb-10 flex flex-wrap items-end justify-between gap-4 md:gap-6">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex flex-wrap gap-10 md:gap-16"
+              className="flex flex-wrap gap-6 md:gap-10 lg:gap-16"
             >
               {stats.map((stat, i) => (
                 <motion.div
@@ -122,7 +122,7 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.85 + i * 0.1 }}
                 >
-                  <div className="text-4xl md:text-5xl font-black text-white leading-none mb-2">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-none mb-1 md:mb-2">
                     {stat.value}
                   </div>
                   <div className="text-xs md:text-sm text-white/70 font-medium">

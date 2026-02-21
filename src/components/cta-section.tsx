@@ -105,7 +105,7 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                       <h4 className="font-semibold text-foreground mb-1">
                         Email Us
                       </h4>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground break-all">
                         mukeshparmar@marutilogistics.in
                       </p>
                       <p className="text-sm text-muted-foreground">
