@@ -48,18 +48,46 @@ const contactInfo = [
   },
 ];
 
+const YOUR_WHATSAPP_NUMBER = "918433517659"; // +91 98210 48434
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
+  const [fields, setFields] = React.useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFields((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate form submission
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 1200);
+
+    const text = [
+      `*New Inquiry from Maruti Mumbai Cargo Website*`,
+      `*Name:* ${fields.firstName} ${fields.lastName}`,
+      `*Email:* ${fields.email}`,
+      fields.phone ? `*Phone:* ${fields.phone}` : null,
+      fields.service ? `*Service:* ${fields.service}` : null,
+      `*Message:*\n${fields.message}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const url = `https://wa.me/${YOUR_WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+
+    setLoading(false);
+    setSubmitted(true);
   };
 
   return (
@@ -184,12 +212,24 @@ export default function ContactPage() {
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="first-name">First Name</Label>
-                          <Input id="first-name" placeholder="John" required />
+                          <Label htmlFor="firstName">First Name</Label>
+                          <Input
+                            id="firstName"
+                            placeholder="John"
+                            required
+                            value={fields.firstName}
+                            onChange={handleChange}
+                          />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="last-name">Last Name</Label>
-                          <Input id="last-name" placeholder="Doe" required />
+                          <Label htmlFor="lastName">Last Name</Label>
+                          <Input
+                            id="lastName"
+                            placeholder="Doe"
+                            required
+                            value={fields.lastName}
+                            onChange={handleChange}
+                          />
                         </div>
                       </div>
 
@@ -200,6 +240,8 @@ export default function ContactPage() {
                           type="email"
                           placeholder="you@example.com"
                           required
+                          value={fields.email}
+                          onChange={handleChange}
                         />
                       </div>
 
@@ -209,6 +251,8 @@ export default function ContactPage() {
                           id="phone"
                           type="tel"
                           placeholder="+91 XXXXX XXXXX"
+                          value={fields.phone}
+                          onChange={handleChange}
                         />
                       </div>
 
@@ -217,6 +261,8 @@ export default function ContactPage() {
                         <Input
                           id="service"
                           placeholder="e.g. Sea Freight, Custom Clearing..."
+                          value={fields.service}
+                          onChange={handleChange}
                         />
                       </div>
 
@@ -227,6 +273,8 @@ export default function ContactPage() {
                           placeholder="Tell us about your shipment requirements, origin, destination, cargo type..."
                           rows={5}
                           required
+                          value={fields.message}
+                          onChange={handleChange}
                         />
                       </div>
 
