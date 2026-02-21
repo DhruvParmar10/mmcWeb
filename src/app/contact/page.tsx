@@ -49,7 +49,7 @@ const contactInfo = [
   },
 ];
 
-const YOUR_WHATSAPP_NUMBER = "918433517659"; // +91 98210 48434
+const YOUR_WHATSAPP_NUMBER = "919167068259";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = React.useState(false);

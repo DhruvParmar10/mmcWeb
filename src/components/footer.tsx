@@ -84,7 +84,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#home"
+                    href="/"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Home
@@ -92,7 +92,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#services"
+                    href="/services"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Services
@@ -100,7 +100,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#about"
+                    href="/about"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     About Us
@@ -108,7 +108,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="/contact"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Contact
@@ -125,7 +125,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/services#sea-freight"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Sea Freight
@@ -133,7 +133,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/services#air-shipments"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Air Shipments
@@ -141,7 +141,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/services#custom-clearing"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Custom Clearing
@@ -149,7 +149,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/services#freight-forwarding"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Freight Forwarding
@@ -157,7 +157,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/services#door-to-door-delivery"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     Door-to-Door Delivery

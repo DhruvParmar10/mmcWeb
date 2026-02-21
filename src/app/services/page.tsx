@@ -19,6 +19,7 @@ import {
 
 const serviceDetails = [
   {
+    id: "sea-freight",
     icon: Ship,
     title: "Sea Freight",
     badge: "Most Popular",
@@ -34,6 +35,7 @@ const serviceDetails = [
     ],
   },
   {
+    id: "air-shipments",
     icon: Plane,
     title: "Air Shipments",
     badge: "Fast Delivery",
@@ -49,6 +51,7 @@ const serviceDetails = [
     ],
   },
   {
+    id: "custom-clearing",
     icon: Package,
     title: "Custom Clearing",
     badge: "Expertise",
@@ -64,6 +67,7 @@ const serviceDetails = [
     ],
   },
   {
+    id: "freight-forwarding",
     icon: TrendingUp,
     title: "Freight Forwarding",
     badge: "End-to-End",
@@ -79,6 +83,7 @@ const serviceDetails = [
     ],
   },
   {
+    id: "door-to-door-delivery",
     icon: MapPin,
     title: "Door-to-Door Delivery",
     badge: "Convenient",
@@ -94,6 +99,7 @@ const serviceDetails = [
     ],
   },
   {
+    id: "logistics-management",
     icon: CheckCircle,
     title: "Logistics Management",
     badge: "Full Suite",
@@ -153,6 +159,7 @@ export default function ServicesPage() {
               return (
                 <Card
                   key={index}
+                  id={service.id}
                   className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <CardHeader className="pb-4">
