@@ -35,7 +35,7 @@ const features: Feature[] = [
     title: "Expert Team",
     description:
       "Dedicated professionals with deep expertise in customs, freight, and logistics.",
-    stat: "500+",
+    stat: "200+",
     statLabel: "Clients",
   },
   {
@@ -48,8 +48,7 @@ const features: Feature[] = [
   },
 ];
 
-export interface FeaturesSectionProps
-  extends React.HTMLAttributes<HTMLElement> {}
+export interface FeaturesSectionProps extends React.HTMLAttributes<HTMLElement> {}
 
 export const FeaturesSection = React.forwardRef<
   HTMLElement,
