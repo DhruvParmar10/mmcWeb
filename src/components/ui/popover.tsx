@@ -7,7 +7,7 @@ interface PopoverContextValue {
 }
 
 const PopoverContext = React.createContext<PopoverContextValue | undefined>(
-  undefined
+  undefined,
 );
 
 const Popover = ({ children }: { children: React.ReactNode }) => {
@@ -69,7 +69,7 @@ const PopoverContent = React.forwardRef<
       className={cn(
         "absolute z-50 mt-2 rounded-md border bg-popover text-popover-foreground shadow-md outline-none animate-in fade-in-0 zoom-in-95",
         alignmentClasses[align],
-        className
+        className,
       )}
       {...props}
     >

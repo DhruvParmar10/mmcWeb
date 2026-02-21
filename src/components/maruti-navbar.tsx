@@ -6,7 +6,6 @@ import { useEffect, useState, useRef } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import {
@@ -15,7 +14,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { Ship, Menu } from "lucide-react";
+import { Ship } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 // Hamburger icon component
 const HamburgerIcon = ({
@@ -63,11 +63,11 @@ export interface MarutiNavbarProps extends React.HTMLAttributes<HTMLElement> {
 
 // Navigation links
 const defaultNavigationLinks: NavLink[] = [
-  { href: "#home", label: "Home", active: true },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
   { href: "#industries", label: "Industries" },
-  { href: "#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
@@ -75,6 +75,34 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
     const [isMobile, setIsMobile] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const containerRef = useRef<HTMLElement>(null);
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const handleNavClick = React.useCallback(
+      (href: string) => {
+        if (href.startsWith("#")) {
+          // Hash-based scroll: only works on home page
+          const id = href.replace("#", "");
+          if (pathname === "/") {
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+          } else {
+            router.push(`/${href}`);
+          }
+        } else {
+          router.push(href);
+        }
+      },
+      [pathname, router],
+    );
+
+    const isActive = React.useCallback(
+      (href: string) => {
+        if (href.startsWith("#")) return false;
+        if (href === "/") return pathname === "/";
+        return pathname === href;
+      },
+      [pathname],
+    );
 
     useEffect(() => {
       const checkWidth = () => {
@@ -150,15 +178,10 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
                       {navigationLinks.map((link, index) => (
                         <NavigationMenuItem key={index} className="w-full">
                           <button
-                            onClick={() => {
-                              const id = link.href.replace("#", "");
-                              document
-                                .getElementById(id)
-                                ?.scrollIntoView({ behavior: "smooth" });
-                            }}
+                            onClick={() => handleNavClick(link.href)}
                             className={cn(
                               "flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer no-underline",
-                              link.active
+                              isActive(link.href)
                                 ? "bg-accent text-accent-foreground"
                                 : "text-foreground/80",
                             )}
@@ -173,7 +196,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
               </Popover>
             )}
             <a
-              href="#"
+              href="/"
               className={cn(
                 "flex items-center gap-2 transition-colors",
                 scrolled
@@ -218,15 +241,10 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
                   {navigationLinks.map((link, index) => (
                     <NavigationMenuItem key={index}>
                       <button
-                        onClick={() => {
-                          const id = link.href.replace("#", "");
-                          document
-                            .getElementById(id)
-                            ?.scrollIntoView({ behavior: "smooth" });
-                        }}
+                        onClick={() => handleNavClick(link.href)}
                         className={cn(
                           "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer no-underline",
-                          link.active
+                          isActive(link.href)
                             ? "bg-accent text-accent-foreground"
                             : "text-foreground/80 hover:text-foreground",
                         )}
@@ -245,11 +263,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
             <Button
               size="sm"
               className="text-sm font-medium px-4 h-9 rounded-md shadow-sm bg-primary text-primary-foreground hover:bg-primary/90"
-              onClick={() => {
-                document
-                  .getElementById("cta")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => router.push("/contact")}
             >
               Contact Us
             </Button>

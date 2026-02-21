@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export interface CTASectionProps extends React.HTMLAttributes<HTMLElement> {}
@@ -59,20 +60,15 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="flex flex-wrap gap-4"
                   >
-                    <Button
-                      size="lg"
-                      className="text-base font-semibold px-8 h-12 rounded-lg shadow-lg bg-primary text-primary-foreground hover:bg-primary/90 group"
-                    >
-                      Get Free Quote
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="text-base font-semibold px-8 h-12 rounded-lg"
-                    >
-                      Track Shipment
-                    </Button>
+                    <Link href="/contact#contact-form">
+                      <Button
+                        size="lg"
+                        className="text-base font-semibold px-8 h-12 rounded-lg shadow-lg bg-primary text-primary-foreground hover:bg-primary/90 group"
+                      >
+                        Get Free Quote
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </motion.div>
                 </div>
 
