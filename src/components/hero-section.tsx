@@ -58,7 +58,13 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               </h2>
 
               <motion.a
-                href="#contact"
+                href="#cta"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("cta")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.45 }}

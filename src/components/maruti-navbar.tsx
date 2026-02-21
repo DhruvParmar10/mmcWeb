@@ -243,7 +243,11 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
             <Button
               size="sm"
               className="text-sm font-medium px-4 h-9 rounded-md shadow-sm bg-primary text-primary-foreground hover:bg-primary/90"
-              onClick={(e) => e.preventDefault()}
+              onClick={() => {
+                document
+                  .getElementById("cta")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Contact Us
             </Button>

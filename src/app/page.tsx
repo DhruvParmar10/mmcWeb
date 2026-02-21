@@ -26,7 +26,7 @@ export default function Home() {
       <ServicesSection />
       <FeaturesSection />
       <AffiliationsSection />
-      <CTASection />
+      <CTASection id="cta" />
       <Footer />
     </div>
   );
