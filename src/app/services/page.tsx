@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MarutiNavbar } from "@/components/maruti-navbar";
 import { ServicesSection } from "@/components/services-section";
 import { FeaturesSection } from "@/components/features-section";
@@ -115,17 +116,25 @@ export default function ServicesPage() {
       <MarutiNavbar />
 
       {/* Hero */}
-      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 bg-muted/30">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl text-center">
-          <Badge variant="outline" className="mb-4 text-primary border-primary">
+      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <Image
+          src="/worldsection-ph.avif"
+          alt="Services hero background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl text-center">
+          <Badge variant="outline" className="mb-4 text-white border-white/60">
             Our Services
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Comprehensive Cargo &amp;
             <br />
             Logistics Solutions
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
             From sea freight to customs clearing, we offer a full suite of
             logistics services tailored to your business needs — backed by 30+
             years of industry experience.

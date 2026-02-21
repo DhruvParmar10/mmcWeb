@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { MarutiNavbar } from "@/components/maruti-navbar";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
@@ -95,15 +96,23 @@ export default function ContactPage() {
       <MarutiNavbar />
 
       {/* Hero */}
-      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 bg-muted/30">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl text-center">
-          <Badge variant="outline" className="mb-4 text-primary border-primary">
+      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <Image
+          src="/worldsection-ph3.jpg"
+          alt="Contact hero background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl text-center">
+          <Badge variant="outline" className="mb-4 text-white border-white/60">
             Get In Touch
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Contact Us
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
             Have a shipment inquiry or need a quote? Our team is here to help.
             Reach out to us and we&apos;ll get back to you promptly.
           </p>

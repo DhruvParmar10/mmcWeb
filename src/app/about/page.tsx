@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MarutiNavbar } from "@/components/maruti-navbar";
 import { FeaturesSection } from "@/components/features-section";
 import { AffiliationsSection } from "@/components/affiliations-section";
@@ -90,28 +91,36 @@ export default function AboutPage() {
       <MarutiNavbar />
 
       {/* Hero */}
-      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 bg-muted/30">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl">
+      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <Image
+          src="/worldsection-ph2.avif"
+          alt="About hero background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 max-w-screen-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge
                 variant="outline"
-                className="mb-4 text-primary border-primary"
+                className="mb-4 text-white border-white/60"
               >
                 About Us
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 30 Years of Trusted
                 <br />
                 Logistics Excellence
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="text-lg text-white/80 leading-relaxed mb-6">
                 Maruti Mumbai Cargo Pvt. Ltd. has been at the forefront of
                 customs clearing, freight forwarding, and logistics solutions
                 since 1994. Based in Borivali, Mumbai, we serve clients across
                 India and connect them to global markets.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-white/80 leading-relaxed">
                 Our team of seasoned professionals brings deep expertise in sea
                 freight, air shipments, and end-to-end logistics management —
                 ensuring your cargo reaches its destination safely, on time, and
