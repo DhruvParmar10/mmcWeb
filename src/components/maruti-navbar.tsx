@@ -66,7 +66,7 @@ const defaultNavigationLinks: NavLink[] = [
   { href: "#home", label: "Home", active: true },
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
-  { href: "#tracking", label: "Tracking" },
+  { href: "#industries", label: "Industries" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -131,7 +131,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
       >
         <div className="container mx-auto flex max-w-screen-2xl items-center justify-between gap-4 py-2">
           {/* Left side - Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex flex-1 items-center gap-2">
             {/* Mobile menu trigger */}
             {isMobile && (
               <Popover>
@@ -231,15 +231,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
           )}
 
           {/* Right side - CTA buttons */}
-          <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              size="sm"
-              className="text-sm font-medium transition-colors border-input bg-background hover:bg-accent hover:text-accent-foreground"
-              onClick={(e) => e.preventDefault()}
-            >
-              Book Now
-            </Button>
+          <div className="flex flex-1 items-center justify-end gap-3">
             <Button
               size="sm"
               className="text-sm font-medium px-4 h-9 rounded-md shadow-sm bg-primary text-primary-foreground hover:bg-primary/90"
