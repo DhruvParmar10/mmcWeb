@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface Company {
   name: string;
-  logo: string; // path to logo image
+  logo?: string; // path to logo image (optional)
 }
 
 const allCompanies: Company[] = [
@@ -17,12 +17,12 @@ const allCompanies: Company[] = [
     name: "Hyundai Merchant Marine",
     logo: "/Logos/Hyundai_Merchant_Marine.png",
   },
-  {
-    name: "Emirates Shipping Line",
-    logo: "/Logos/emirates-shipping-line.webp",
-  },
   { name: "MSC", logo: "/Logos/msc.png" },
   { name: "ZIM", logo: "/Logos/ZIM_Logo.svg" },
+  { name: "CMA CGM", logo: "/Logos/CMA_CGM_logo.png" },
+  { name: "COSCO", logo: "/Logos/COSCO.png" },
+  { name: "Maersk Line", logo: "/Logos/maersk-line.webp" },
+  { name: "ONE", logo: "/Logos/oneline.png" },
 ];
 
 const secondRowCompanies: Company[] = [
@@ -30,8 +30,19 @@ const secondRowCompanies: Company[] = [
   { name: "Mahindra", logo: "/Logos/mahindra-rise-customer-logo.png" },
   { name: "York", logo: "/Logos/york-simplymilesahead.png" },
   { name: "SAF-Holland", logo: "/Logos/Saf-holland.png" },
-  { name: "Econship", logo: "/Logos/econship.webp" },
-  { name: "Partner", logo: "/Logos/logoinner.png" },
+  { name: "Alcon Electronics", logo: "/Logos/alcon eletronics.png" },
+  { name: "Swarna Enterprises" },
+  { name: "Kamlavati Exports" },
+  { name: "Kichwamaji Exporters" },
+  { name: "Abbey Fashions Pvt. Ltd." },
+  { name: "Puneet Exports & Trading House" },
+  { name: "Maloo Exports" },
+  { name: "Shreeji Chemicals & Industries" },
+  { name: "The Choice Fashions" },
+  { name: "Aasra Overseas" },
+  { name: "Pink City Experts" },
+  { name: "Platinum Overseas" },
+  { name: "Bhana Vogue Gallery" },
 ];
 
 export interface TestimonialsProps extends React.HTMLAttributes<HTMLElement> {}
@@ -81,13 +92,19 @@ export const TestimonialsSection = React.forwardRef<
                   key={index}
                   className="flex-shrink-0 w-44 h-24 flex items-center justify-center p-4 rounded-lg border border-border bg-card hover:bg-accent/30 hover:border-accent transition-all duration-300"
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="max-h-12 max-w-full w-auto object-contain select-none"
-                    draggable={false}
-                  />
+                  {company.logo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={company.logo}
+                      alt={company.name}
+                      className="max-h-12 max-w-full w-auto object-contain select-none"
+                      draggable={false}
+                    />
+                  ) : (
+                    <span className="text-sm font-medium text-center text-foreground leading-tight select-none">
+                      {company.name}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
@@ -109,13 +126,19 @@ export const TestimonialsSection = React.forwardRef<
                     key={index}
                     className="flex-shrink-0 w-44 h-24 flex items-center justify-center p-4 rounded-lg border border-border bg-card hover:bg-accent/30 hover:border-accent transition-all duration-300"
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={company.logo}
-                      alt={company.name}
-                      className="max-h-12 max-w-full w-auto object-contain select-none"
-                      draggable={false}
-                    />
+                    {company.logo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={company.logo}
+                        alt={company.name}
+                        className="max-h-12 max-w-full w-auto object-contain select-none"
+                        draggable={false}
+                      />
+                    ) : (
+                      <span className="text-sm font-medium text-center text-foreground leading-tight select-none">
+                        {company.name}
+                      </span>
+                    )}
                   </div>
                 ),
               )}

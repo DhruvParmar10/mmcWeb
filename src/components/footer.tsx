@@ -22,7 +22,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
         ref={ref}
         className={cn(
           "relative w-full bg-card border-t border-border",
-          className
+          className,
         )}
         {...props}
       >
@@ -35,10 +35,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 <Ship className="h-8 w-8 text-primary" strokeWidth={2} />
                 <div className="flex flex-col">
                   <span className="font-bold text-lg leading-tight text-foreground">
-                    Maruti Mumbai Cargo
-                  </span>
-                  <span className="text-xs text-muted-foreground leading-tight">
-                    Pvt Ltd
+                    Maruti Mumbai Cargo <br></br> Pvt. Ltd.
                   </span>
                 </div>
               </div>
@@ -249,7 +246,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
         </div>
       </footer>
     );
-  }
+  },
 );
 
 Footer.displayName = "Footer";

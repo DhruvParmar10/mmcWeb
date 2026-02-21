@@ -185,7 +185,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
               />
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">
-                  Maruti Mumbai Cargo
+                  Maruti Mumbai Cargo <br></br>Pvt. Ltd.
                 </span>
                 <span
                   className={cn(
@@ -194,9 +194,7 @@ export const MarutiNavbar = React.forwardRef<HTMLElement, MarutiNavbarProps>(
                       ? "text-muted-foreground"
                       : "text-muted-foreground",
                   )}
-                >
-                  Pvt Ltd
-                </span>
+                ></span>
               </div>
             </a>
           </div>
