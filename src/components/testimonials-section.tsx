@@ -54,6 +54,7 @@ export const TestimonialsSection = React.forwardRef<
   return (
     <section
       ref={ref}
+      id="industries"
       className={cn(
         "relative w-full py-20 md:py-32 bg-background overflow-hidden",
         className,
