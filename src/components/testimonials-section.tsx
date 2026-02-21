@@ -40,7 +40,7 @@ const secondRowCompanies: Company[] = [
   { name: "Shreeji Chemicals & Industries" },
   { name: "The Choice Fashions" },
   { name: "Aasra Overseas" },
-  { name: "Pink City Experts" },
+  { name: "Pink City Exports" },
   { name: "Platinum Overseas" },
   { name: "Bhana Vogue Gallery" },
 ];

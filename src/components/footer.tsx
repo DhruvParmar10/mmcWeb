@@ -182,20 +182,28 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm text-muted-foreground">
-                      Mumbai, Maharashtra
+                      902, Parvati Hub, Roshan Nagar,
                       <br />
-                      India
+                      OFF. Chandawarkar Road, Borivali (West),
+                      <br />
+                      Mumbai - 400092, Maharashtra, India
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
+                  <div className="space-y-1">
                     <a
-                      href="tel:+91XXXXXXXXXX"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      href="tel:+919821048434"
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +91 XXXX XXXXXX
+                      +91 98210 48434
+                    </a>
+                    <a
+                      href="tel:+919167068259"
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      +91 91670 68259
                     </a>
                   </div>
                 </li>
@@ -203,10 +211,10 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                   <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <a
-                      href="mailto:info@marutimumbai.com"
+                      href="mailto:mukeshparmar@marutilogistics.in"
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                      info@marutimumbai.com
+                      mukeshparmar@marutilogistics.in
                     </a>
                   </div>
                 </li>

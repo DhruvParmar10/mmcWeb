@@ -15,7 +15,7 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         ref={ref}
         className={cn(
           "relative w-full py-20 md:py-32 bg-background",
-          className
+          className,
         )}
         {...props}
       >
@@ -92,7 +92,9 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                       <h4 className="font-semibold text-foreground mb-1">
                         Call Us
                       </h4>
-                      <p className="text-muted-foreground">+91 XXXX XXXXXX</p>
+                      <p className="text-muted-foreground">
+                        +91 9821048434 && +91 9167068259
+                      </p>
                       <p className="text-sm text-muted-foreground">
                         Mon-Sat, 9AM-6PM IST
                       </p>
@@ -108,7 +110,7 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                         Email Us
                       </h4>
                       <p className="text-muted-foreground">
-                        info@marutimumbai.com
+                        mukeshparmar@marutilogistics.in
                       </p>
                       <p className="text-sm text-muted-foreground">
                         24/7 Email Support
@@ -125,7 +127,8 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
                         Visit Us
                       </h4>
                       <p className="text-muted-foreground">
-                        Mumbai, Maharashtra
+                        902, Parvati Hub, Roshan Nagar, OFF. chandawarkar road,
+                        Borivali(West), Mumbai-400092, Maharashtra
                       </p>
                       <p className="text-sm text-muted-foreground">India</p>
                     </div>
@@ -137,7 +140,7 @@ export const CTASection = React.forwardRef<HTMLElement, CTASectionProps>(
         </div>
       </section>
     );
-  }
+  },
 );
 
 CTASection.displayName = "CTASection";
