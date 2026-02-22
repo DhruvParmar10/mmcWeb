@@ -20,26 +20,26 @@ import {
 
 const milestones = [
   {
-    year: "1994",
+    year: "2009",
     title: "Company Founded",
     description:
       "Maruti Mumbai Cargo Pvt. Ltd. was established in Mumbai with a vision to simplify international trade logistics.",
   },
   {
-    year: "2000",
+    year: "2011",
     title: "BCBA Membership",
     description:
       "Became a registered member of the Board of Customs Brokers Association, cementing our expertise in customs clearance.",
   },
   {
-    year: "2008",
+    year: "2012",
     title: "FIATA Affiliation",
     description:
       "Joined the International Federation of Freight Forwarders Associations (FIATA), connecting us to a global network.",
   },
   {
-    year: "2015",
-    title: "Global Network Expansion",
+    year: "2018",
+    title: "Global Network Connection",
     description:
       "Expanded operations to cover 50+ countries through strategic partnerships with international freight networks.",
   },
@@ -50,7 +50,7 @@ const milestones = [
       "Launched shipment and digital documentation systems to enhance client experience.",
   },
   {
-    year: "2024",
+    year: "2023",
     title: "10,000+ Shipments",
     description:
       "Celebrated delivering over 10,000 successful shipments, maintaining a 99% customer satisfaction rate.",
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <p className="text-lg text-white/80 leading-relaxed mb-6">
                 Maruti Mumbai Cargo Pvt. Ltd. has been at the forefront of
                 customs clearing, freight forwarding, and logistics solutions
-                since 1994. Based in Borivali, Mumbai, we serve clients across
+                since 2009. Based in Borivali, Mumbai, we serve clients across
                 India and connect them to global markets.
               </p>
               <p className="text-white/80 leading-relaxed">
@@ -202,7 +202,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              Three decades of milestones, growth, and achievements
+              15+ years of milestones, growth, and achievements
             </p>
           </div>
           <div className="relative">
